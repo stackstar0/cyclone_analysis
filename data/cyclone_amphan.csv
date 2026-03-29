@@ -1,0 +1,24 @@
+DateTime,Latitude,Longitude,WindSpeed_kmh,Pressure_hPa,Humidity_pct,Category,Phase
+2020-05-16T06:00Z,12.0,87.0,45,1000,78,Depression,Genesis
+2020-05-16T12:00Z,12.5,86.5,55,998,80,Deep Depression,Intensification
+2020-05-16T18:00Z,13.0,86.0,65,994,82,Cyclonic Storm,Intensification
+2020-05-17T00:00Z,13.2,85.8,85,988,84,Severe Cyclonic Storm,Intensification
+2020-05-17T06:00Z,13.5,85.5,110,976,86,Very Severe Cyclonic Storm,Rapid Intensification
+2020-05-17T12:00Z,13.8,85.5,140,962,88,Very Severe Cyclonic Storm,Rapid Intensification
+2020-05-17T18:00Z,14.2,85.6,175,948,89,Extremely Severe Cyclonic Storm,Rapid Intensification
+2020-05-18T00:00Z,14.5,85.8,215,935,90,Extremely Severe Cyclonic Storm,Rapid Intensification
+2020-05-18T06:00Z,15.0,86.0,240,925,91,Super Cyclonic Storm,Peak Intensification
+2020-05-18T12:00Z,15.5,86.2,260,920,92,Super Cyclonic Storm,Peak
+2020-05-18T18:00Z,16.0,86.5,250,922,91,Super Cyclonic Storm,Peak
+2020-05-19T00:00Z,16.5,86.8,230,930,90,Extremely Severe Cyclonic Storm,Weakening
+2020-05-19T06:00Z,17.0,87.0,210,938,88,Extremely Severe Cyclonic Storm,Weakening
+2020-05-19T12:00Z,17.5,87.2,195,945,86,Extremely Severe Cyclonic Storm,Weakening
+2020-05-19T18:00Z,18.0,87.5,180,950,84,Extremely Severe Cyclonic Storm,Weakening
+2020-05-20T00:00Z,18.5,87.8,170,955,82,Very Severe Cyclonic Storm,Approach
+2020-05-20T06:00Z,19.2,88.0,165,958,80,Very Severe Cyclonic Storm,Approach
+2020-05-20T12:00Z,20.0,88.3,160,960,78,Very Severe Cyclonic Storm,Near Landfall
+2020-05-20T14:00Z,20.8,88.5,155,962,76,Very Severe Cyclonic Storm,Landfall
+2020-05-20T18:00Z,21.5,88.8,120,972,74,Severe Cyclonic Storm,Post-Landfall
+2020-05-21T00:00Z,22.2,89.0,85,982,70,Cyclonic Storm,Dissipation
+2020-05-21T06:00Z,23.0,89.2,55,990,66,Deep Depression,Dissipation
+2020-05-21T12:00Z,23.8,89.5,35,996,62,Depression,Remnant

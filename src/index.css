@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 5%;
+    --foreground: 210 40% 96%;
+
+    --card: 222 40% 8%;
+    --card-foreground: 210 40% 96%;
+
+    --popover: 222 40% 8%;
+    --popover-foreground: 210 40% 96%;
+
+    --primary: 173 80% 45%;
+    --primary-foreground: 222 47% 5%;
+
+    --secondary: 222 30% 14%;
+    --secondary-foreground: 210 25% 78%;
+
+    --muted: 222 25% 12%;
+    --muted-foreground: 215 20% 50%;
+
+    --accent: 38 92% 55%;
+    --accent-foreground: 222 47% 5%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 25% 14%;
+    --input: 222 25% 14%;
+    --ring: 173 80% 45%;
+
+    --radius: 0.5rem;
+
+    --cyclone-cat1: 50 90% 55%;
+    --cyclone-cat2: 35 95% 55%;
+    --cyclone-cat3: 20 95% 52%;
+    --cyclone-cat4: 5 90% 50%;
+    --cyclone-cat5: 340 85% 48%;
+
+    --ocean-deep: 222 50% 8%;
+    --ocean-mid: 210 55% 18%;
+    --ocean-glow: 173 70% 35%;
+
+    --info: 210 100% 56%;
+    --success: 152 69% 40%;
+    --warning: 38 92% 55%;
+
+    --gradient-hero: linear-gradient(160deg, hsl(222 47% 3%) 0%, hsl(222 50% 8%) 40%, hsl(210 45% 10%) 100%);
+    --gradient-card: linear-gradient(160deg, hsl(222 40% 10%) 0%, hsl(222 42% 7%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(173 80% 45%) 0%, hsl(190 75% 40%) 100%);
+    --gradient-danger: linear-gradient(135deg, hsl(38 92% 55%) 0%, hsl(0 72% 50%) 100%);
+    --gradient-panel: linear-gradient(180deg, hsl(222 40% 10%) 0%, hsl(222 45% 6%) 100%);
+
+    --shadow-glow: 0 0 40px -8px hsl(173 80% 45% / 0.25);
+    --shadow-card: 0 4px 24px -4px hsl(0 0% 0% / 0.6);
+    --shadow-intense: 0 8px 48px -8px hsl(0 0% 0% / 0.8);
+
+    --sidebar-background: 222 42% 7%;
+    --sidebar-foreground: 210 25% 78%;
+    --sidebar-primary: 173 80% 45%;
+    --sidebar-primary-foreground: 222 47% 5%;
+    --sidebar-accent: 222 25% 12%;
+    --sidebar-accent-foreground: 210 25% 78%;
+    --sidebar-border: 222 25% 14%;
+    --sidebar-ring: 173 80% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  ::selection {
+    background: hsl(173 80% 45% / 0.3);
+    color: hsl(210 40% 96%);
+  }
+}
+
+@layer utilities {
+  .text-gradient-primary {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-accent);
+  }
+
+  .text-gradient-danger {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-danger);
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .bg-gradient-panel {
+    background: var(--gradient-panel);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-intense {
+    box-shadow: var(--shadow-intense);
+  }
+
+  .glow-line {
+    @apply h-px w-full;
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--primary) / 0.3), transparent);
+  }
+
+  /* GIS grid overlay pattern */
+  .gis-grid {
+    background-image:
+      linear-gradient(hsl(var(--primary) / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .gis-grid-dense {
+    background-image:
+      linear-gradient(hsl(var(--primary) / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.06) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+
+  /* Radar scan effect */
+  .radar-sweep {
+    background: conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      hsl(var(--primary) / 0.15) 30deg,
+      transparent 60deg
+    );
+    animation: radar-rotate 4s linear infinite;
+  }
+
+  /* Panel header style */
+  .panel-header {
+    @apply flex items-center justify-between px-4 py-2.5 border-b border-border;
+    background: hsl(var(--primary) / 0.03);
+  }
+
+  .panel-label {
+    @apply text-[10px] font-mono uppercase tracking-[0.2em] text-muted-foreground;
+  }
+
+  .panel-title {
+    @apply text-sm font-semibold text-foreground;
+  }
+
+  .status-dot {
+    @apply h-1.5 w-1.5 rounded-full bg-primary;
+    box-shadow: 0 0 6px hsl(var(--primary) / 0.6);
+  }
+
+  .status-dot-warning {
+    @apply h-1.5 w-1.5 rounded-full;
+    background: hsl(var(--accent));
+    box-shadow: 0 0 6px hsl(var(--accent) / 0.6);
+  }
+
+  .coord-label {
+    @apply text-[9px] font-mono text-muted-foreground/50 absolute;
+  }
+}
+
+@keyframes radar-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes data-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
