@@ -1,60 +1,73 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Maximize2, X, Compass } from "lucide-react";
-import cyclonePathMap from "@/../maps/cyclone_path.png";
-import windMap from "@/../maps/wind_map.png";
-import pressureMap from "@/../maps/pressure_map.png";
-import heroImage from "@/assets/cyclone-hero.jpg";
+import amphanPathMap from "@/assets/WhatsApp Image 2026-03-26 at 7.18.55 PM.jpeg";
+import remalPathMap from "@/assets/WhatsApp Image 2026-03-26 at 7.09.58 PM.jpeg";
+import hamoonPathMap from "@/assets/hamoon.png";
+import minchangPathMap from "@/assets/minchang.png";
+import mountaPathMap from "@/assets/mounta.png";
 
 const maps = [
   {
-    src: heroImage,
-    title: "Study Area Map",
-    desc: "This map shows the Bay of Bengal extent.",
-    technique: "Reference Map",
-    coords: "Study Area: Bay of Bengal (5°N–25°N, 80°E–100°E)",
-    projection: "Projection: EPSG:4326 (WGS 84)",
-    legend: [
-      { color: "#ffffff", label: "Study Extent" }
-    ]
-  },
-  {
-    src: cyclonePathMap,
-    title: "Cyclone Path Map (Amphan, May 16–21, 2020)",
-    desc: "This map shows the cyclone trajectory from genesis to landfall.",
+    src: amphanPathMap,
+    title: "Cyclone Amphan (2020) Path",
+    desc: "Path analysis of Cyclone Amphan showing landfall in West Bengal.",
     technique: "Spatial Analysis",
-    coords: "Buffer distances: 50 km, 100 km, 200 km",
+    coords: "Study Area: Bay of Bengal",
     projection: "Projection: EPSG:4326 (WGS 84)",
     legend: [
-      { color: "#fbbf24", label: "Track Nodes" },
-      { color: "#ffffff", label: "Path" },
-      { color: "#ef4444", label: "Landfall" }
+      { color: "#ef4444", label: "Most Affected" },
+      { color: "#fef08a", label: "Less Affected" }
     ]
   },
   {
-    src: windMap,
-    title: "Wind Speed Map (IDW Interpolation)",
-    desc: "This map shows wind speed distribution using IDW interpolation.",
-    technique: "IDW Interpolation",
-    coords: "Method: Inverse Distance Weighting (p=2)",
+    src: mountaPathMap,
+    title: "Cyclone Mocha / Mounta (2023) Path",
+    desc: "Trajectory of Cyclone Mocha (Mounta) moving across the Bay of Bengal.",
+    technique: "Spatial Analysis",
+    coords: "Study Area: Bay of Bengal",
     projection: "Projection: EPSG:4326 (WGS 84)",
     legend: [
-      { color: "#ef4444", label: "High Wind" },
-      { color: "#22c55e", label: "Low Wind" }
+      { color: "#ef4444", label: "Most Affected" },
+      { color: "#fef08a", label: "Less Affected" }
     ]
   },
   {
-    src: pressureMap,
-    title: "Pressure Map (Thematic)",
-    desc: "This map shows graduated pressure distribution.",
-    technique: "Thematic Mapping",
-    coords: "Range: 920–1000 hPa",
+    src: hamoonPathMap,
+    title: "Cyclone Hamoon (2023) Path",
+    desc: "Trajectory of Cyclone Hamoon impacting the eastern coast and Bangladesh.",
+    technique: "Spatial Analysis",
+    coords: "Study Area: Bay of Bengal",
     projection: "Projection: EPSG:4326 (WGS 84)",
     legend: [
-      { color: "#3b82f6", label: "Low Pressure (920 hPa)" },
-      { color: "#eab308", label: "High Pressure (1000 hPa)" }
+      { color: "#ef4444", label: "Most Affected" },
+      { color: "#fef08a", label: "Less Affected" }
     ]
   },
+  {
+    src: minchangPathMap,
+    title: "Cyclone Michaung / Minchang (2023) Path",
+    desc: "Cyclone Michaung path affecting Andhra Pradesh and Tamil Nadu.",
+    technique: "Spatial Analysis",
+    coords: "Study Area: Bay of Bengal",
+    projection: "Projection: EPSG:4326 (WGS 84)",
+    legend: [
+      { color: "#ef4444", label: "Most Affected" },
+      { color: "#fef08a", label: "Less Affected" }
+    ]
+  },
+  {
+    src: remalPathMap,
+    title: "Cyclone Remal (2024) Path",
+    desc: "Cyclone Remal trajectory with landfall impact mapping.",
+    technique: "Spatial Analysis",
+    coords: "Study Area: Bay of Bengal",
+    projection: "Projection: EPSG:4326 (WGS 84)",
+    legend: [
+      { color: "#ef4444", label: "Most Affected" },
+      { color: "#fef08a", label: "Less Affected" }
+    ]
+  }
 ];
 
 const MapOverlays = ({ legend }: { legend: { color: string, label: string }[] }) => (

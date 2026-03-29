@@ -104,7 +104,7 @@ const AnalysisCharts = () => {
           </div>
           <h2 className="text-3xl font-bold text-foreground mb-2">Parameter Variation</h2>
           <p className="text-xs text-muted-foreground max-w-lg">
-            Time-series analysis of Cyclone Amphan from genesis (May 16) through peak to dissipation (May 21, 2020).
+            Time-series analysis of Cyclone Amphan (Sample Study) from genesis (May 16) through peak to dissipation (May 21, 2020).
           </p>
           <div className="glow-line max-w-[200px] mt-3" />
         </motion.div>

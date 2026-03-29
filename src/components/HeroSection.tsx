@@ -45,7 +45,7 @@ const HeroSection = () => {
             >
               <span className="text-foreground">GIS-based Analysis of</span>
               <br />
-              <span className="text-primary">Cyclone Amphan (2020)</span>
+              <span className="text-primary">Bay of Bengal Cyclones</span>
             </motion.h1>
 
             <motion.p
@@ -54,7 +54,7 @@ const HeroSection = () => {
               transition={{ delay: 0.25 }}
               className="text-base font-medium text-foreground/80 mb-6 max-w-2xl"
             >
-              GIS-based analysis of Cyclone Amphan (2020) using wind, pressure, and humidity data.
+              GIS-based analysis of recent major cyclones (Amphan, Mocha, Hamoon, Michaung, Remal) using satellite imagery, wind, and pressure mapping.
             </motion.p>
 
             <motion.div
@@ -65,7 +65,7 @@ const HeroSection = () => {
             >
               <h2 className="text-xs font-bold text-primary mb-2 tracking-widest uppercase">Objective</h2>
               <p className="text-sm text-foreground leading-relaxed">
-                To analyze the spatial trajectory and intensity of Cyclone Amphan using historical dataset of wind speed, pressure, and humidity data through GIS techniques.
+                To analyze the spatial trajectory and impact areas of recent Bay of Bengal cyclones (2020-2024) using historical datasets and GIS mapping techniques.
               </p>
             </motion.div>
 
@@ -100,17 +100,17 @@ const HeroSection = () => {
           >
             <div className="rounded border border-border bg-card shadow-sm">
               <div className="panel-header border-b border-border p-3 flex justify-between items-center bg-muted/30">
-                <span className="text-xs font-bold text-foreground">CYCLONE AMPHAN — KEY STATISTICS</span>
-                <span className="text-[10px] font-mono text-muted-foreground uppercase">Super Cyclonic Storm</span>
+                <span className="text-xs font-bold text-foreground">RECENT CYCLONES (2020-2024)</span>
+                <span className="text-[10px] font-mono text-muted-foreground uppercase">GIS Statistics</span>
               </div>
 
               <div className="p-4 space-y-3">
                 <div className="grid grid-cols-2 gap-3">
                   {[
-                    { icon: Wind, label: "MAX WIND", value: "260", unit: "km/h" },
-                    { icon: Gauge, label: "MIN PRESSURE", value: "920", unit: "hPa" },
-                    { icon: Droplets, label: "PEAK HUMIDITY", value: "92", unit: "%" },
-                    { icon: MapPin, label: "LANDFALL", value: "Sundarbans", unit: "" },
+                    { icon: Wind, label: "CYCLONES TRACKED", value: "5", unit: "Events" },
+                    { icon: Gauge, label: "MIN PRESSURE", value: "920", unit: "hPa (Amphan)" },
+                    { icon: Droplets, label: "MAX WIND", value: "260", unit: "km/h" },
+                    { icon: MapPin, label: "STUDY AREA", value: "Bay of Bengal", unit: "" },
                   ].map(({ icon: Icon, label, value, unit }) => (
                     <div
                       key={label}

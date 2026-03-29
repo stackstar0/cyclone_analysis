@@ -34,7 +34,7 @@ const DataTableSection = () => {
             <div className="status-dot" />
             <span className="panel-label text-primary">TRACK DATA</span>
           </div>
-          <h2 className="text-3xl font-bold text-foreground mb-2">Cyclone Amphan Best-Track</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-2">Cyclone Database Export</h2>
           <div className="glow-line max-w-[200px]" />
         </motion.div>
 

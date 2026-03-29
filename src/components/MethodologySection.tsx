@@ -6,7 +6,7 @@ const steps = [
     icon: Database,
     num: "01",
     title: "Data Collection",
-    desc: "6-hourly best-track data for Cyclone Amphan (May 16–21, 2020) from IMD and JTWC. Wind speed, pressure, and humidity at each track point.",
+    desc: "Best-track data for recent major cyclones (Amphan, Mocha, Hamoon, Michaung, Remal) from IMD and JTWC. Wind speed, pressure, and humidity records.",
     tags: ["IMD", "JTWC", "ERA5"],
   },
   {

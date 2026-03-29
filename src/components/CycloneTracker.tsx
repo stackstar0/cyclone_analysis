@@ -2,12 +2,11 @@ import { motion } from "framer-motion";
 import cycloneMap from "@/assets/cyclone-map.jpg";
 
 const cyclones = [
+  { name: "Cyclone Remal", year: 2024, category: "SCS", maxWind: "130 km/h", pressure: "972 hPa", color: "bg-cyclone-cat1", active: true },
+  { name: "Cyclone Michaung", year: 2023, category: "SCS", maxWind: "110 km/h", pressure: "988 hPa", color: "bg-cyclone-cat1", active: true },
+  { name: "Cyclone Hamoon", year: 2023, category: "VSCS", maxWind: "150 km/h", pressure: "968 hPa", color: "bg-cyclone-cat3", active: true },
+  { name: "Cyclone Mocha", year: 2023, category: "ESCS", maxWind: "215 km/h", pressure: "938 hPa", color: "bg-cyclone-cat4", active: true },
   { name: "Cyclone Amphan", year: 2020, category: "SuCS", maxWind: "260 km/h", pressure: "920 hPa", color: "bg-cyclone-cat5", active: true },
-  { name: "Cyclone Fani", year: 2019, category: "ESCS", maxWind: "215 km/h", pressure: "932 hPa", color: "bg-cyclone-cat4", active: false },
-  { name: "Cyclone Yaas", year: 2021, category: "VSCS", maxWind: "150 km/h", pressure: "968 hPa", color: "bg-cyclone-cat3", active: false },
-  { name: "Cyclone Bulbul", year: 2019, category: "VSCS", maxWind: "140 km/h", pressure: "976 hPa", color: "bg-cyclone-cat3", active: false },
-  { name: "Cyclone Hudhud", year: 2014, category: "ESCS", maxWind: "195 km/h", pressure: "950 hPa", color: "bg-cyclone-cat4", active: false },
-  { name: "Cyclone Phailin", year: 2013, category: "VSCS", maxWind: "260 km/h", pressure: "940 hPa", color: "bg-cyclone-cat5", active: false },
 ];
 
 const CycloneTracker = () => {
@@ -85,7 +84,7 @@ const CycloneTracker = () => {
           >
             <div className="panel-header">
               <span className="panel-label">STORM RECORDS</span>
-              <span className="panel-label">2013–2021 · 6 ENTRIES</span>
+              <span className="panel-label">2020–2024 · 5 ENTRIES</span>
             </div>
 
             {/* Column headers */}

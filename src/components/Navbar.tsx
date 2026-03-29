@@ -47,7 +47,7 @@ const Navbar = () => {
           </div>
           <div>
             <h1 className="text-sm font-bold tracking-tight text-foreground leading-none">
-              AMPHAN GIS
+              CYCLONE GIS
             </h1>
             <p className="text-[10px] text-muted-foreground font-mono tracking-wider mt-0.5">
               SPATIAL ANALYSIS
