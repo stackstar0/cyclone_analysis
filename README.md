@@ -2,7 +2,7 @@
 
 > **GIS-based cyclone path analysis using wind, pressure, and humidity data in the Bay of Bengal region, with a focus on Cyclone Amphan (2020).**
 
-🔗 **Live Demo**: [https://arabian-cyclone-watch.lovable.app](https://arabian-cyclone-watch.lovable.app)
+
 
 ---
 
@@ -154,7 +154,7 @@ The integration of geospatial analysis with an interactive web dashboard provide
 
 ## 🚀 Deployment
 
-This project is deployed on **Vercel** via Lovable.
+This project can be deployed on **Vercel**.
 
 ```sh
 # Local development
